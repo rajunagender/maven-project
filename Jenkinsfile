@@ -33,7 +33,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        sath "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war"
+                        bat "winscp -i /home/jenkins/tomcat-demo.pem **/target/*.war"
                     }
                 }
             }
