@@ -27,13 +27,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "winscp -i /home/jenkins/tomcat-demo.pem **/target/*.war'
+                        bat "winscp -i /home/jenkins/tomcat-demo.pem **/target/*.war"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        sath "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war'
+                        sath "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war"
                     }
                 }
             }
